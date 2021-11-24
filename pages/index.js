@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen flex-col">
       <h1 className="text-blue-800 font-black uppercase text-8xl text-center mt-9">Md Borhan Uddin</h1>
-      <h3>Learning NextJS & TailwindCSS</h3>
+      <h3 className="text-4xl font-bold text-blue-700 uppercase mt-10">Learning NextJS & TailwindCSS</h3>
       </div>
 
     </div>

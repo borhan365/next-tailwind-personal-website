@@ -13,6 +13,7 @@ export default function Home() {
 
       <div className="flex justify-center items-center h-screen">
       <h1 className="text-blue-800 font-black uppercase text-8xl text-center mt-9">Md Borhan Uddin</h1>
+      <h3>Learning NextJS & TailwindCSS</h3>
       </div>
 
     </div>

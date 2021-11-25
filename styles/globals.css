@@ -48,3 +48,9 @@ body {
 .portfolio-item:hover button {
   bottom: 0px;
 }
+
+@media(max-width: 768px) {
+  .hero-wrapper::after{
+    content: none;
+  }
+}

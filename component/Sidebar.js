@@ -1,9 +1,13 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import profilePhoto from '../public/img/others/auhor-image.jpg'
+import Image from 'next/image';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from 'react';
+import profilePhoto from '../public/img/others/auhor-image.jpg';
+import MenuItems from './Data/MenuItems';
+import SocialIcons from './Data/SocialIcons';
 
 function Sidebar() {
+  const router = useRouter();
   return (
     <>
       {/* sidebar */}
@@ -11,7 +15,7 @@ function Sidebar() {
           <div className="sidebar w-72 bg-gray-800 h-screen flex justify-between flex-col py-5 sm:hidden md:block xl:block">
 
             {/* profile area */}
-            <div className="profile-wrapper relative text-center">
+            <div className="profile-wrapper relative text-center mb-10 cursor-pointer">
               <Image width={150} height={150} className="rounded-full h-40 w-40 flex items-center justify-center mx-auto mt-2 object-cover shadow-xl border-2" src={profilePhoto} alt="alt" />
 
               {/* online status */}
@@ -26,22 +30,37 @@ function Sidebar() {
             </div>
 
               {/* menu area */}
-              <ul className="text-center">
-                  <li className="px-5 pb-3"><Link className="text-white uppercase font-400 hover:text-blue-300 text-base" href="/">Home</Link></li>
-                  <li className="px-5 pb-3"><Link className="text-white uppercase font-400 hover:text-blue-300 text-base" href="/about">About</Link></li>
-                  <li className="px-5 pb-3"><Link className="text-white uppercase font-400 hover:text-blue-300 text-base" href="/contact">Contact</Link></li>
-                  <li className="px-5 pb-3"><Link className="text-white uppercase font-400 hover:text-blue-300 text-base" href="/portfolio">Portfolio</Link></li>
-                  <li className="px-5 pb-3"><Link className="text-white uppercase font-400 hover:text-blue-300 text-base" href="/blog">Blog</Link></li>
+              <ul className="ml-10">
+                {
+                  MenuItems.map((menu, index) => (
+                    <li key={index} className="px-5 pb-5">
+                      <Link href={menu.url}>
+                        <div className={` uppercase font-400 transition ease-in-out duration-300 hover:text-blue-300 cursor-pointer text-lg flex justify-start gap-3
+                        ${
+                          router.asPath === menu.url
+                            ? "text-green-500"
+                            : "text-white"
+                        }`}><span className="text-2xl">{menu.icon}</span> {menu.label}</div>
+                      </Link>
+                    </li>
+                  ))
+                }
               </ul>
 
               {/* social-media */}
               <div className="header-footer-area">
-                  <ul className="text-center flex justify-center aligns-center gap-2">
-                    <li className="list-none"><a className="text-white text-xl" href="#"><i className="ri-facebook-line"></i></a></li>
-                    <li className="list-none"><a className="text-white text-xl" href="#"><i className="ri-instagram-line"></i></a></li>
-                    <li className="list-none"><a className="text-white text-xl" href="#"><i className="ri-github-line"></i></a></li>
-                    <li className="list-none"><a className="text-white text-xl" href="#"><i className="ri-twitter-line"></i></a></li>
-                    <li className="list-none"><a className="text-white text-xl" href="#"><i className="ri-linkedin-line"></i></a></li>
+                  <ul className="flex justify-center ml-3 mt-10 gap-4">
+                    {
+                      SocialIcons.map((item, index) => (
+                        <li key={index} className="list-none">
+                          <Link href={item.url}>
+                            <span className="text-white hover:text-green-500 cursor-pointer text-xl">{item.icon}</span>
+                            </Link>
+                        </li>
+                      ))
+                    }
+                    
+                    
                   </ul>
               </div>
 

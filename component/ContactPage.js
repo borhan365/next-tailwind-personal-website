@@ -45,7 +45,7 @@ function ContactPage() {
             </div>
 
             {/* form area */}
-            <form class="p-4 w-full gap-4 bg-gray-800 rounded mt-2 h-full" action="">
+            <form class="p-4 w-full gap-4 bg-gray-800 rounded mt-2 h-full mb-5" action="">
                 <h2 class="text-white font-semibold capitalize text-2xl">Please fill out the form</h2>
                 <div class="w-full mt-5 rounded bg-gray-800 flex justify-between gap-4">
                     <input class="w-full p-2 rounded font-normal" type="text" placeholder="Your name" />

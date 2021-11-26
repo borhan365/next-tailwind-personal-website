@@ -15,13 +15,13 @@ function AboutPage() {
   return (
     <>
       {/* about body area */}
-        <div className="about-wrapper px-5 sm:px-10 pb-20 absolute sm:left-72 bg-gray-900">
+        <div className="about-wrapper px-5 sm:px-10 pb-5 sm:pb-10 absolute sm:left-72 bg-gray-900">
 
           {/* about bio */}
           <section>
 
             {/* title */}
-            <Title title="About Us " />
+            <Title title="About Us" />
 
             {/* bio */}
             <Bio />

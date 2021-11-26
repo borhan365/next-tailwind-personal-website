@@ -7,7 +7,7 @@ import Title from './Title'
 function PortfolioPage() {
   return (
     <>
-      <div class="portfolio-wrapper px-5 sm:px-10 pb-20 absolute left-0 sm:left-72 right-0 bg-gray-900">
+      <div class="portfolio-wrapper px-5 sm:px-10 pb-5 sm:pb-10 absolute left-0 sm:left-72 right-0 bg-gray-900">
                 
             {/* title */}
             <Title title="Portfolio" />

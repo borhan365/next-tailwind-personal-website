@@ -5,6 +5,7 @@ import React from 'react';
 import profilePhoto from '../public/img/others/auhor-image.jpg';
 import MenuItems from './Data/MenuItems';
 import SocialIcons from './Data/SocialIcons';
+import Social from './Social';
 
 function Sidebar() {
   const router = useRouter();
@@ -48,21 +49,7 @@ function Sidebar() {
               </ul>
 
               {/* social-media */}
-              <div className="header-footer-area">
-                  <ul className="flex justify-center ml-3 mt-10 gap-4">
-                    {
-                      SocialIcons.map((item, index) => (
-                        <li key={index} className="list-none">
-                          <Link href={item.url}>
-                            <span className="text-white hover:text-green-500 cursor-pointer text-xl">{item.icon}</span>
-                            </Link>
-                        </li>
-                      ))
-                    }
-                    
-                    
-                  </ul>
-              </div>
+              <Social />
 
             </div>
         </header>

@@ -11,19 +11,19 @@ function BlogPage() {
   return (
     <>
       {/* Blog area */}
-      <div class="blog-wrapper px-10 pb-20 absolute left-72 bg-gray-900">
+      <div class="blog-wrapper px-5 sm:px-10 pb-20 absolute left-0 sm:left-72 bg-gray-900">
           {/* title */}
           <Title title="Blog" />
 
-            <div class="grid grid-cols-2 gap-8 gap-y-20 rounded mt-4 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 rounded mt-4 w-full">
 
                 {
                   Blog.map((item, index) => (
-                    <div key={index} class="mt-2 rounded bg-gray-100 mb-60 w-full shadow-xl relative">
+                    <div key={index} class="mt-2 rounded bg-gray-800  w-full shadow-xl relative">
 
                         {/* thumbnail */}
-                        <div class="rounded rounded-b-none w-full h-full object-cover mb-2">
-                            <Image layout='fill' class="rounded rounded-b-none w-full h-full object-cover" src={item.img} alt={item.title} />
+                        <div class="rounded rounded-b-none mb-2">
+                            <Image layout='responsive' width={500} height={300} class="rounded rounded-b-none object-cover" src={item.img} alt={item.title} />
                         </div>
 
                         {/* content */}

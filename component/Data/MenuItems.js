@@ -17,7 +17,7 @@ const MenuItems = [
   },
   {
     label: 'Contact',
-    url: "/resume",
+    url: "/contact",
     icon: <FiPhoneCall />,
     active: false,
   },

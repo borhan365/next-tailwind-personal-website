@@ -9,11 +9,13 @@ import WhatIDo from './Data/WhatIDo'
 import Pricing from './Data/Pricing'
 import FunFact from './Data/FunFact'
 
+import { BsBriefcaseFill } from 'react-icons/bs'
+
 function AboutPage() {
   return (
     <>
       {/* about body area */}
-        <div className="about-wrapper px-10 pb-20 absolute sm:left-72 bg-gray-900">
+        <div className="about-wrapper px-5 sm:px-10 pb-20 absolute sm:left-72 bg-gray-900">
 
           {/* about bio */}
           <section>
@@ -41,7 +43,7 @@ function AboutPage() {
                   
                   {/* icon */}
                   <div className="flex justify-center items-center flex-col">
-                    <i className="ri-briefcase-line w-10 h-10 flex justify-center items-center bg-gray-900 rounded-full border border-blue-800 shadow-xl"></i>
+                    <i className="ri-briefcase-line w-10 h-10 flex justify-center items-center bg-gray-900 rounded-full border border-blue-800 shadow-xl"><BsBriefcaseFill /></i>
                     <span className="w-0.5 h-20 bg-gray-600"></span>
                   </div>
   
@@ -95,7 +97,7 @@ function AboutPage() {
 
                     <div className="flex w-full justify-between items-center mt-5">
                         <div className="flex justify-between gap-2 items-center">
-                          <Image layout='fill' className="h-16 w-16 rounded-full object-cover border-2" src="/public/img/others/auhor-image.jpg" alt="" />
+                          <Image width="50" height="50" className="h-16 w-16 rounded-full object-cover border-2" src={item.img} alt={item.name} />
                             <div>
                               <h3 className="capitalize font-medium">{item.name}</h3>
                               <p className="font-light text-xs">{item.title}</p>

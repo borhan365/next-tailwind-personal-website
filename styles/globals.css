@@ -1,41 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
-/* ./styles/globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ./styles/globals.css */
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #111827;
 }
 
-.profile-thumb{
+.profile-thumb {
   height: 500px;
   width: 400px;
 }
 
-.profile-thumb img{
+.profile-thumb img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .hero-wrapper::after {
-  content: '';
+  content: "";
   width: 852px;
   height: 820px;
   position: absolute;
   background: #0f2258;
   right: -280px;
   bottom: -190px;
-  transform: rotate(
-112deg
-);
+  transform: rotate(112deg);
   z-index: 1;
   border: 7px solid #fff;
   box-shadow: 0px 6px 16px -4px #000000a1;
@@ -48,8 +47,8 @@ body {
   bottom: 0px;
 }
 
-@media(max-width: 768px) {
-  .hero-wrapper::after{
+@media (max-width: 768px) {
+  .hero-wrapper::after {
     content: none;
   }
 }

@@ -6,7 +6,7 @@ import {BsGithub} from 'react-icons/bs'
 const SocialIcons = [
   {
     name: 'facebook',
-    url: 'https://mdborhanuddin.com/',
+    url: 'https://www.facebook.com/borhan365/',
     icon: <GrFacebookOption />
   },
   {

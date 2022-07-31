@@ -21,7 +21,8 @@ function AboutPage() {
           <section>
 
             {/* title */}
-            <Title title="About Us" />
+            {/* <Title title="About Us" /> */}
+            <h1 className="uppercase mt-10 mb-5 text-white text-3xl text-center sm:text-left sm:text-5xl shadow font-bold my-5">Md borhan <span className="text-yellow-500">Uddin</span> <span className="w-40 bg-indigo-500 h-3 rounded-xl"></span></h1>
 
             {/* bio */}
             <Bio />

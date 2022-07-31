@@ -37,7 +37,7 @@ function BlogPage() {
 
                             </div>
 
-                            <Link class="text-white curser-pointer" href={`/single/${item.id}`}>
+                            <Link class="text-white curser-pointer" href={`/blog/${item.id}`}>
                                 <a>
                                   <h2 class="text-2xl hover:text-green-500">{item.title}</h2>
                                 </a>
@@ -45,7 +45,7 @@ function BlogPage() {
 
                             <p class="text-sm text-gray-300 font-light mt-2">{item.desc}</p> 
 
-                            <Link class="text-white curser-pointer" href={`/single/${item.id}`}>
+                            <Link class="text-white curser-pointer" href={`/blog/${item.id}`}>
                                 <a>
                                   <button class="bg-gray-700 hover:bg-blue-900 transition-all py-2 px-10 text-white text-md uppercase w-full flex justify-center items-center gap-2 shadow-xl mt-2"> <BsBoxArrowRight /> Learn more </button>
                                   </a>

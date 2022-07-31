@@ -11,7 +11,9 @@ function Social() {
               SocialIcons.map((item, index) => (
                 <li key={index} className="list-none">
                   <Link href={item.url}>
+                    <a target="_blank">
                     <span className="text-white hover:text-green-500 cursor-pointer text-xl">{item.icon}</span>
+                    </a>
                     </Link>
                 </li>
               ))
